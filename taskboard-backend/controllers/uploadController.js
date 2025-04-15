@@ -43,7 +43,7 @@ const uploadFile = async (req, res) => {
       const extension = file.originalname.split('.').pop();
       const safeFileName = `${Date.now()}_${req.user._id}.${extension}`;
 
-      const uploadUrl = `https://m52vdtfhji.execute-api.us-east-2.amazonaws.com/dev/taskfilesharsha/${safeFileName}`;
+      const uploadUrl = `path to aws-s3 bucket/${safeFileName}`;
       const response = await axios.put(uploadUrl, file.buffer, {
         headers: {
           'Content-Type': file.mimetype,
