@@ -25,7 +25,7 @@ const authenticate = async (req, res, next) => {
         firebaseUid: decodedToken.uid,
         email: firebaseUser.email,
         name: firebaseUser.displayName || '',
-        password: 'firebase-auth', // ⚠️ placeholder, not used since Firebase handles auth
+        password: 'firebase-auth', // placeholder, not used since Firebase handles auth
       });
     }
 
@@ -36,29 +36,6 @@ const authenticate = async (req, res, next) => {
     return res.status(401).json({ message: "Unauthorized" });
   }
 };
-// const admin = require('firebase-admin');
-
-// const authenticate = async (req, res, next) => {
-//   const authHeader = req.headers.authorization;
-
-//   if (!authHeader?.startsWith('Bearer ')) {
-//     return res.status(401).json({ message: 'Unauthorized' });
-//   }
-
-//   const token = authHeader.split(' ')[1];
-
-//   try {
-//     const decodedToken = await admin.auth().verifyIdToken(token);
-//     req.user = {
-//       _id: decodedToken.uid, // make sure this is _id for MongoDB
-//       email: decodedToken.email,
-//     };
-//     next();
-//   } catch (err) {
-//     console.error('Auth error:', err);
-//     res.status(401).json({ message: 'Invalid or expired token' });
-//   }
-// };
 
 module.exports = authenticate;
 
