@@ -1,5 +1,5 @@
 const admin = require('firebase-admin');
-const serviceAccount = require('./config/taskauth-7b088-firebase-adminsdk-fbsvc-b1e32c1869.json'); // Path to your Firebase service account JSON file
+const serviceAccount = require('keep path to your firebase service acnt'); // Path to your Firebase service account JSON file
 const authRoutes = require('./routes/authRoutes');
 const express = require('express');
 const mongoose = require('mongoose');
