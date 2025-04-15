@@ -7,7 +7,7 @@ It is a Web Application project, where you can learn about MongoDb, Express, Rea
 
 I didn't completely test it for 181 days myself
 
-I need to change the task logic, when the person reaches 181 days, task should be deleted automatically, allowing the user for creating new tasks(person doing it can also just change the logic in )
+I need to change the task logic, when the person reaches 181 days, task should be deleted automatically, allowing the user for creating new tasks(person updating the logic can send a delete request to the backend at `api/tasks/delete`)
 
 May be should have worked on with animations
 
